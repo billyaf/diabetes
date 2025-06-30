@@ -13,6 +13,14 @@ model = joblib.load('./model/random_forest_model.pkl')
 # Load the dataset containing food details
 food_data = pd.read_csv('./dataset/food_data.csv')
 
+@app.route('/')
+def home():
+    """
+    Handles requests to the root URL (/).
+    This is useful for health checks and to confirm the backend is running.
+    """
+    return "Backend Diabetes Prediction is running! Access API at /recommend"
+
 @app.route('/recommend', methods=['POST'])
 def recommend():
     try:
