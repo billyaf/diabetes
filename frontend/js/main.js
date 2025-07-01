@@ -8,7 +8,7 @@ form?.addEventListener("submit", async (e) => {
   const data = Object.fromEntries(formData.entries());
 
   try {
-    const response = await fetch("http://127.0.0.1:5000/recommend", {
+    const response = await fetch("https://diabetes-backend-zpft.onrender.com/recommend", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
